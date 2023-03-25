@@ -1,0 +1,2 @@
+One CPU time: 65
+Many CPU time: 9
