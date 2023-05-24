@@ -1,0 +1,43 @@
+# FORK
+
+./main ignore fork
+ignore
+Raising signal
+
+./main handler fork
+handler
+Raising signal
+Correctly handled!
+Received signal 10. PID: 28744, PPID: 28742
+
+./main mask fork
+mask
+Raising signal
+Signal is pending. PID: 28745
+Raising signal
+Signal is pending in child process. PID: 28746
+
+./main pending fork
+pending
+Raising signal
+Signal is pending. PID: 28747
+Signal is not pending in child process. PID: 28748
+
+# EXEC
+
+./main ignore exec
+ignore
+Raising signal
+Ignore in child process
+
+./main mask exec
+mask
+Signal is pending. PID: 28750
+execl
+Mask in child process
+
+./main pending exec
+pending
+Signal is pending. PID: 28751
+execl
+Signal pending in child process. PID: 28751
